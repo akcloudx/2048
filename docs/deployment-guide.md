@@ -98,4 +98,31 @@ Accessing the Application
 
 Paste the copied DNS name into your web browser. You may need to prepend http:// to the URL. If everything is configured correctly, you will see the 2048 game running.
 
+### Optional: Accessing the Application with a Custom Domain 🌐
+
+For a more professional touch, you can configure a custom domain to point to your application. This involves creating a CNAME record in your domain's DNS settings that maps a user-friendly subdomain (like 2048.contoso.com) to the long DNS name of your Application Load Balancer.
+
+Prerequisites
+You must own a custom domain name.
+
+You must have access to your domain's DNS management console (e.g., AWS Route 53, GoDaddy, Cloudflare, etc.).
+
+Step-by-Step Instructions
+
+Get the ALB DNS Name: First, obtain the DNS name of your ALB from the previous step using the kubectl get ingress command.
+
+kubectl get ingress -n game-2048
+
+Create a CNAME Record: Log in to your domain's DNS provider and navigate to the DNS management settings. Create a new record with the following details:
+
+Type: CNAME
+
+Host/Record Name: 2048 (or your desired subdomain)
+
+Value/Target: The DNS name of the ALB you copied from the kubectl command.
+
+Wait for DNS Propagation: After creating the record, it will take some time for the changes to propagate across the internet. This can range from a few minutes to several hours. You can check the status using an online tool like What's My DNS.
+
+Once propagation is complete, you can access your application at your custom domain: http://2048.contoso.com.
+
 
