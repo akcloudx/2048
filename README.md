@@ -1,6 +1,6 @@
-# Serverless Web Application on AWS EKS 🚀
+# Cloud-Native Mastery: A Serverless EKS Deployment 🚀
 
-This repository contains the infrastructure as code and configuration for deploying a serverless, highly-available web application on **Amazon EKS**. The project demonstrates the power of integrating Kubernetes with core AWS services like **Fargate** and the **Application Load Balancer (ALB)** to build scalable and cost-effective solutions.
+This repository contains the infrastructure as code and configuration for deploying the classic **2048 game** to a serverless, highly-available web application on **Amazon EKS**. The project demonstrates the power of integrating Kubernetes with core AWS services like **Fargate** and the **Application Load Balancer (ALB)** to build scalable and cost-effective solutions.
 
 ### Table of Contents
 
@@ -12,6 +12,7 @@ This repository contains the infrastructure as code and configuration for deploy
 
 ### Key Features & Technologies 💡
 
+* **Application:** The **2048 game** is deployed as the sample application.
 * **AWS EKS:** Managed Kubernetes for container orchestration.
 * **AWS Fargate:** Serverless compute to run containers without managing EC2 instances.
 * **AWS Load Balancer Controller:** A Kubernetes add-on that automatically provisions an ALB for external access.
